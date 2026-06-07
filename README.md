@@ -6,30 +6,35 @@
 
 <!-- Animated typing header -->
 <a href="https://github.com/mikadegeus">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&duration=2800&pause=900&color=F75C7E&center=true&vCenter=true&width=720&height=80&lines=Hey%2C+ik+ben+Mika+%F0%9F%91%8B;Developer+%26+automatiseringsbouwer;Minecraft+plugins+%2B+Next.js+apps;Altijd+aan+het+bouwen+%E2%9C%A8" alt="typing header" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&duration=2800&pause=900&color=F75C7E&center=true&vCenter=true&width=760&height=80&lines=Hey%2C+I'm+Mika+%F0%9F%91%8B;Developer+%26+automation+builder;Minecraft+plugins+%2B+Next.js+apps;From+web+servers+to+cybersecurity;Always+building+something+%E2%9C%A8" alt="typing header" />
 </a>
 
 <br/>
 
 <!-- Visitor counter + quick badges -->
-<img src="https://komarev.com/ghpvc/?username=mikadegeus&label=Profielbezoeken&color=f75c7e&style=flat-square" alt="profile views" />
+<img src="https://komarev.com/ghpvc/?username=mikadegeus&label=Profile%20views&color=f75c7e&style=flat-square" alt="profile views" />
 &nbsp;
-<img src="https://img.shields.io/badge/Focus-Automatisering%20%26%20Game%20Dev-blueviolet?style=flat-square" alt="focus" />
+<img src="https://img.shields.io/badge/Focus-Automation%20%26%20Game%20Dev-blueviolet?style=flat-square" alt="focus" />
 &nbsp;
-<img src="https://img.shields.io/badge/Status-Open%20voor%20projecten-success?style=flat-square" alt="status" />
+<img src="https://img.shields.io/badge/Status-Open%20for%20projects-success?style=flat-square" alt="status" />
 
 </div>
 
 ---
 
-## 🧙‍♂️ Over mij
+## 🧙‍♂️ About me
 
-Ik bouw graag dingen die *werken* en er ook nog leuk uitzien. Twee werelden waar ik me thuis voel:
+I'm a developer who likes building things that actually *work*, and look good while doing it. My playground stretches across a few different worlds:
 
-- 🎮 **Game development**: custom Minecraft-plugins in Java/Paper, van economieën tot quest-systemen.
-- ⚙️ **Automatisering**: web-apps die saai werk wegnemen, gebouwd met Next.js, TypeScript en een snufje AI.
+- 🎮 **Game development** &nbsp;Custom Minecraft plugins in Java on the Paper API: economies, ability systems with cooldowns, quest engines, party systems, and the kind of server-side glue that ties a whole game mode together.
+- ⚙️ **Automation** &nbsp;Web apps and pipelines that take repetitive work off people's plates. Think lead enrichment, proposal generation, and outreach flows, often with a layer of AI where it genuinely adds value.
+- 🌐 **Web & full-stack** &nbsp;Modern web apps with Next.js, React, TypeScript and Tailwind, backed by databases through Prisma. From the UI down to the data layer.
+- 🖥️ **Servers & infrastructure** &nbsp;Running and configuring web servers and game servers, managing deployments, and keeping things online, fast, and predictable.
+- 🔐 **Cybersecurity** &nbsp;A growing focus area: secure-by-default coding, input validation, auth flows, hardening servers, and thinking like an attacker so the defense holds up.
 
-> Van een Minecraft dungeon-crawler tot een cold-outreach pipeline: als het te automatiseren of te bouwen valt, vind je mij ervoor.
+> Whether it's a Minecraft dungeon crawler, a cold-outreach pipeline, or locking down a server: if it can be built or automated, that's where you'll find me. I care about clean code, real reliability, and shipping things people actually use.
+
+I'm always learning, currently going deeper into security and infrastructure, and I love a project where I get to wear several hats at once.
 
 ---
 
@@ -51,46 +56,28 @@ Ik bouw graag dingen die *werken* en er ook nog leuk uitzien. Twee werelden waar
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 </div>
 
 ---
 
-## 🚀 Featured projecten
-
-<table>
-<tr>
-<td width="50%" valign="top">
+## 🚀 Featured projects
 
 ### 🗡️ Dungeoneers
-Custom **Java 21 / Paper** plugin die een Minecraft Dungeons-achtige server lijmt: een coins-economie, abilities met cooldowns, een quest- en objective-systeem, levens & checkpoints, een party-systeem met gedeelde voortgang en een PlaceholderAPI-bridge.
+A custom **Java 21 / Paper** plugin that glues together a Minecraft Dungeons-style server: a coins economy, abilities with cooldowns, a quest and objective system, lives & checkpoints, a party system with shared progress, and a PlaceholderAPI bridge so external menus and HUDs can show it all.
 
 `Java` · `Paper API` · `SQLite` · `PlaceholderAPI`
 
-<a href="https://github.com/mikadegeus/Dungeoneers">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mikadegeus&repo=Dungeoneers&theme=radical" alt="Dungeoneers repo" />
-</a>
-
-</td>
-<td width="50%" valign="top">
-
 ### ⚙️ ZG Automations Dashboard
-Een **Next.js 16 + Tailwind v4** werkstation dat leads verrijkt, op-maat automatiserings-voorstellen genereert en cold-outreach mails opstelt en verstuurt. Gebouwd met Prisma, Zod en de Anthropic SDK.
+A **Next.js 16 + Tailwind v4** workstation that enriches leads, generates tailored automation proposals, and drafts and sends cold-outreach email. Built with Prisma, Zod and the Anthropic SDK.
 
 `TypeScript` · `Next.js` · `Prisma` · `Tailwind` · `AI`
 
-<a href="https://github.com/mikadegeus/ZG-Automations-Dashboard">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mikadegeus&repo=ZG-Automations-Dashboard&theme=radical" alt="ZG Automations repo" />
-</a>
-
-</td>
-</tr>
-</table>
-
 ---
 
-## 📊 GitHub in cijfers
+## 📊 GitHub stats
 
 <div align="center">
 
@@ -100,16 +87,6 @@ Een **Next.js 16 + Tailwind v4** werkstation dat leads verrijkt, op-maat automat
 <br/><br/>
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=mikadegeus&theme=radical&hide_border=true" alt="github streak" />
-
-</div>
-
----
-
-## 🏆 Trophies
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=mikadegeus&theme=radical&no-frame=true&no-bg=true&margin-w=4&row=1&column=7" alt="trophies" />
 
 </div>
 
@@ -129,7 +106,7 @@ Een **Next.js 16 + Tailwind v4** werkstation dat leads verrijkt, op-maat automat
 
 ---
 
-## 🤝 Connect met mij
+## 🤝 Let's connect
 
 <div align="center">
 
@@ -155,5 +132,5 @@ Een **Next.js 16 + Tailwind v4** werkstation dat leads verrijkt, op-maat automat
 ---
 
 <div align="center">
-<sub>⭐️ Bedankt voor het langskomen. Bouw iets moois vandaag.</sub>
+<sub>⭐️ Thanks for stopping by. Go build something cool today.</sub>
 </div>
