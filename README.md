@@ -105,7 +105,7 @@ A growing collection of custom Paper plugins: a prison-server core, a shop syste
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=mikadegeus&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="github stats" />
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=mikadegeus&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="github stats" />
 <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mikadegeus&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="top languages" />
 
 <br/><br/>
