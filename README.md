@@ -88,28 +88,6 @@ A custom **Java 21 / Paper 1.21** plugin that glues together a Minecraft Dungeon
 </td>
 <td width="50%" valign="top">
 
-### ⚙️ ZG Automations Dashboard
-A **Next.js 16 + Tailwind v4** workstation that enriches leads, generates tailored automation proposals, and drafts and sends cold-outreach email. Built with Prisma, Zod and the Anthropic SDK.
-
-`TypeScript` · `Next.js` · `Prisma` · `AI`
-
-[**→ View repo**](https://github.com/mikadegeus/zg-automations)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🔧 ZG Tools
-A local automation toolkit for searching and contacting leads, wired together with **n8n** and exposed through **ngrok**. The engine room behind the outreach pipeline.
-
-`n8n` · `ngrok` · `Automation`
-
-[**→ View repo**](https://github.com/mikadegeus/zg-tools)
-
-</td>
-<td width="50%" valign="top">
-
 ### 🧱 Minecraft Plugin Suite
 A growing collection of custom Paper plugins: a prison-server core, a shop system, custom scoreboards, and more, each solving a specific server need in clean, self-contained Java.
 
