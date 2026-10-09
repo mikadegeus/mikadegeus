@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
+<title id="title">Toolbox</title>
+<desc id="desc">LANGUAGES: Java, TypeScript, JavaScript, Python, SQL, Bash. GAME SERVERS: Fabric, Velocity, Paper, Gradle, JUnit 5, LuckPerms. WEB: Astro, React, Next.js, Express, Vite, Tailwind CSS, Prisma, Firebase. DATA &amp; INFRA: Redis, MariaDB, MongoDB, Docker, Linux, Caddy, Nginx, Cloudflare. AUTOMATION: n8n, Puppeteer, Python scripting. SECURITY: Burp Suite, nmap, Wireshark, Scapy, Authelia, OWASP, ISO 27001, MITRE ATT&amp;CK.</desc>
+<defs>
+<style>
+  .mono{font-family:'JetBrains Mono','Cascadia Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+  .sans{font-family:'Inter','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif}
+  .flow{stroke-dasharray:6 18;animation:flow 1.4s linear infinite}
+  .pulse{animation:pulse 1.8s ease-in-out infinite}
+  .tw{animation:tw 3.2s ease-in-out infinite}
+  .blink{animation:blink 1.1s steps(1) infinite}
+  @keyframes flow{to{stroke-dashoffset:-24}}
+  @keyframes pulse{50%{opacity:.25}}
+  @keyframes tw{0%,100%{opacity:1}50%{opacity:.2}}
+  @keyframes blink{50%{opacity:0}}
+  @media (prefers-reduced-motion: reduce){.flow,.pulse,.tw,.blink{animation:none}}
+</style>
+<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#FFFFFF" fill-opacity=".06"/></pattern>
+
+</defs>
+
+<rect width="1200" height="470" rx="20" fill="#0E1016"/>
+<rect width="1200" height="470" rx="20" fill="url(#dots)"/>
+<rect width="1200" height="470" rx="20" fill="none" stroke="#2A2F3D" stroke-width="2"/>
+<text x="56" y="62" class="mono" font-size="16" font-weight="700" fill="#FFCB05" text-anchor="start" letter-spacing="3">TOOLBOX</text>
+<rect x="56" y="117" width="8" height="8" fill="#FFCB05"/>
+<text x="76" y="126" class="mono" font-size="15" font-weight="700" fill="#98A0B3" text-anchor="start" letter-spacing="2">LANGUAGES</text>
+<rect x="268" y="104" width="64.6" height="34" rx="6" fill="#1C2030" stroke="#FFCB05" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="282" y="126" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Java</text>
+<rect x="342.6" y="104" width="119.5" height="34" rx="6" fill="#1C2030" stroke="#FFCB05" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="356.6" y="126" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">TypeScript</text>
+<rect x="472.1" y="104" width="119.5" height="34" rx="6" fill="#1C2030" stroke="#FFCB05" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="486.1" y="126" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">JavaScript</text>
+<rect x="601.6" y="104" width="82.9" height="34" rx="6" fill="#1C2030" stroke="#FFCB05" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="615.6" y="126" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Python</text>
+<rect x="694.5" y="104" width="55.45" height="34" rx="6" fill="#1C2030" stroke="#FFCB05" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="708.5" y="126" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">SQL</text>
+<rect x="759.95" y="104" width="64.6" height="34" rx="6" fill="#1C2030" stroke="#FFCB05" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="773.95" y="126" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Bash</text>
+<rect x="56" y="173" width="8" height="8" fill="#E3350D"/>
+<text x="76" y="182" class="mono" font-size="15" font-weight="700" fill="#98A0B3" text-anchor="start" letter-spacing="2">GAME SERVERS</text>
+<rect x="268" y="160" width="82.9" height="34" rx="6" fill="#1C2030" stroke="#E3350D" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="282" y="182" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Fabric</text>
+<rect x="360.9" y="160" width="101.2" height="34" rx="6" fill="#1C2030" stroke="#E3350D" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="374.9" y="182" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Velocity</text>
+<rect x="472.09999999999997" y="160" width="73.75" height="34" rx="6" fill="#1C2030" stroke="#E3350D" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="486.09999999999997" y="182" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Paper</text>
+<rect x="555.8499999999999" y="160" width="82.9" height="34" rx="6" fill="#1C2030" stroke="#E3350D" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="569.8499999999999" y="182" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Gradle</text>
+<rect x="648.7499999999999" y="160" width="92.05" height="34" rx="6" fill="#1C2030" stroke="#E3350D" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="662.7499999999999" y="182" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">JUnit 5</text>
+<rect x="750.7999999999998" y="160" width="110.35" height="34" rx="6" fill="#1C2030" stroke="#E3350D" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="764.7999999999998" y="182" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">LuckPerms</text>
+<rect x="56" y="229" width="8" height="8" fill="#3D7DCA"/>
+<text x="76" y="238" class="mono" font-size="15" font-weight="700" fill="#98A0B3" text-anchor="start" letter-spacing="2">WEB</text>
+<rect x="268" y="216" width="73.75" height="34" rx="6" fill="#1C2030" stroke="#3D7DCA" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="282" y="238" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Astro</text>
+<rect x="351.75" y="216" width="73.75" height="34" rx="6" fill="#1C2030" stroke="#3D7DCA" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="365.75" y="238" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">React</text>
+<rect x="435.5" y="216" width="92.05" height="34" rx="6" fill="#1C2030" stroke="#3D7DCA" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="449.5" y="238" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Next.js</text>
+<rect x="537.55" y="216" width="92.05" height="34" rx="6" fill="#1C2030" stroke="#3D7DCA" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="551.55" y="238" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Express</text>
+<rect x="639.5999999999999" y="216" width="64.6" height="34" rx="6" fill="#1C2030" stroke="#3D7DCA" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="653.5999999999999" y="238" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Vite</text>
+<rect x="714.1999999999999" y="216" width="137.8" height="34" rx="6" fill="#1C2030" stroke="#3D7DCA" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="728.1999999999999" y="238" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Tailwind CSS</text>
+<rect x="862" y="216" width="82.9" height="34" rx="6" fill="#1C2030" stroke="#3D7DCA" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="876" y="238" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Prisma</text>
+<rect x="954.9" y="216" width="101.2" height="34" rx="6" fill="#1C2030" stroke="#3D7DCA" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="968.9" y="238" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Firebase</text>
+<rect x="56" y="285" width="8" height="8" fill="#3DDC84"/>
+<text x="76" y="294" class="mono" font-size="15" font-weight="700" fill="#98A0B3" text-anchor="start" letter-spacing="2">DATA &amp; INFRA</text>
+<rect x="268" y="272" width="73.75" height="34" rx="6" fill="#1C2030" stroke="#3DDC84" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="282" y="294" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Redis</text>
+<rect x="351.75" y="272" width="92.05" height="34" rx="6" fill="#1C2030" stroke="#3DDC84" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="365.75" y="294" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">MariaDB</text>
+<rect x="453.8" y="272" width="92.05" height="34" rx="6" fill="#1C2030" stroke="#3DDC84" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="467.8" y="294" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">MongoDB</text>
+<rect x="555.85" y="272" width="82.9" height="34" rx="6" fill="#1C2030" stroke="#3DDC84" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="569.85" y="294" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Docker</text>
+<rect x="648.75" y="272" width="73.75" height="34" rx="6" fill="#1C2030" stroke="#3DDC84" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="662.75" y="294" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Linux</text>
+<rect x="732.5" y="272" width="73.75" height="34" rx="6" fill="#1C2030" stroke="#3DDC84" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="746.5" y="294" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Caddy</text>
+<rect x="816.25" y="272" width="73.75" height="34" rx="6" fill="#1C2030" stroke="#3DDC84" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="830.25" y="294" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Nginx</text>
+<rect x="900" y="272" width="119.5" height="34" rx="6" fill="#1C2030" stroke="#3DDC84" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="914" y="294" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Cloudflare</text>
+<rect x="56" y="341" width="8" height="8" fill="#A26BFA"/>
+<text x="76" y="350" class="mono" font-size="15" font-weight="700" fill="#98A0B3" text-anchor="start" letter-spacing="2">AUTOMATION</text>
+<rect x="268" y="328" width="55.45" height="34" rx="6" fill="#1C2030" stroke="#A26BFA" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="282" y="350" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">n8n</text>
+<rect x="333.45" y="328" width="110.35" height="34" rx="6" fill="#1C2030" stroke="#A26BFA" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="347.45" y="350" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Puppeteer</text>
+<rect x="453.79999999999995" y="328" width="174.4" height="34" rx="6" fill="#1C2030" stroke="#A26BFA" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="467.79999999999995" y="350" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Python scripting</text>
+<rect x="56" y="397" width="8" height="8" fill="#FF8A3D"/>
+<text x="76" y="406" class="mono" font-size="15" font-weight="700" fill="#98A0B3" text-anchor="start" letter-spacing="2">SECURITY</text>
+<rect x="268" y="384" width="119.5" height="34" rx="6" fill="#1C2030" stroke="#FF8A3D" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="282" y="406" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Burp Suite</text>
+<rect x="397.5" y="384" width="64.6" height="34" rx="6" fill="#1C2030" stroke="#FF8A3D" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="411.5" y="406" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">nmap</text>
+<rect x="472.1" y="384" width="110.35" height="34" rx="6" fill="#1C2030" stroke="#FF8A3D" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="486.1" y="406" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Wireshark</text>
+<rect x="592.45" y="384" width="73.75" height="34" rx="6" fill="#1C2030" stroke="#FF8A3D" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="606.45" y="406" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Scapy</text>
+<rect x="676.2" y="384" width="101.2" height="34" rx="6" fill="#1C2030" stroke="#FF8A3D" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="690.2" y="406" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Authelia</text>
+<rect x="787.4000000000001" y="384" width="73.75" height="34" rx="6" fill="#1C2030" stroke="#FF8A3D" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="801.4000000000001" y="406" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">OWASP</text>
+<rect x="871.1500000000001" y="384" width="110.35" height="34" rx="6" fill="#1C2030" stroke="#FF8A3D" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="885.1500000000001" y="406" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">ISO 27001</text>
+<rect x="991.5000000000001" y="384" width="137.8" height="34" rx="6" fill="#1C2030" stroke="#FF8A3D" stroke-opacity=".45" stroke-width="1.5"/>
+<text x="1005.5000000000001" y="406" class="mono" font-size="15" font-weight="400" fill="#F3F4F7" text-anchor="start" letter-spacing="0">MITRE ATT&amp;CK</text>
+
+</svg>

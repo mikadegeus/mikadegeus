@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" role="img" aria-labelledby="title desc">
+<title id="title">Cobblemon Rejects: network overview</title>
+<desc id="desc">Cobblemon Rejects, a commercial Minecraft network that is live in production, where Mika is lead developer. Players connect through a single Velocity proxy that routes them to five pure Fabric 1.21.1 backends: hub, peaceful, hard, resource and adventure. Shared state lives in Redis (handoff and chat), MariaDB (player state) and MongoDB (Cobblemon data). Base stats: 5 Fabric backends, 1 Velocity proxy, 15 custom mods, 3 datastores, about 120 mods in the client pack. Party, PC, Pokédex, inventory, economy and location follow every player across all five worlds. Stack: Java 21, Fabric, Velocity, Redis, MariaDB, MongoDB, Docker.</desc>
+<defs>
+<style>
+  .mono{font-family:'JetBrains Mono','Cascadia Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+  .sans{font-family:'Inter','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif}
+  .flow{stroke-dasharray:6 18;animation:flow 1.4s linear infinite}
+  .pulse{animation:pulse 1.8s ease-in-out infinite}
+  .tw{animation:tw 3.2s ease-in-out infinite}
+  .blink{animation:blink 1.1s steps(1) infinite}
+  @keyframes flow{to{stroke-dashoffset:-24}}
+  @keyframes pulse{50%{opacity:.25}}
+  @keyframes tw{0%,100%{opacity:1}50%{opacity:.2}}
+  @keyframes blink{50%{opacity:0}}
+  @media (prefers-reduced-motion: reduce){.flow,.pulse,.tw,.blink{animation:none}}
+</style>
+<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#FFFFFF" fill-opacity=".06"/></pattern>
+
+<linearGradient id="shell" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EA4220"/><stop offset="1" stop-color="#B8290B"/></linearGradient>
+<radialGradient id="lens" cx=".4" cy=".35" r=".75"><stop offset="0" stop-color="#8FD0FF"/><stop offset=".55" stop-color="#3D7DCA"/><stop offset="1" stop-color="#1B3F7A"/></radialGradient>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#FFFFFF" fill-opacity=".035"/></pattern>
+</defs>
+
+<rect width="1200" height="850" rx="28" fill="url(#shell)"/>
+<rect x="8" y="8" width="1184" height="834" rx="22" fill="none" stroke="#FFFFFF" stroke-opacity=".18" stroke-width="2"/>
+<path d="M28 158 H640 L684 146 H1172" fill="none" stroke="#000000" stroke-opacity=".28" stroke-width="3"/>
+
+<circle cx="92" cy="80" r="50" fill="#F4F4F6" stroke="#000000" stroke-opacity=".3" stroke-width="3"/>
+<circle cx="92" cy="80" r="40" fill="url(#lens)"/>
+<ellipse cx="78" cy="64" rx="12" ry="8" fill="#FFFFFF" fill-opacity=".7"/>
+<circle cx="172" cy="40" r="10" fill="#FF4B4B" stroke="#000000" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="200" cy="40" r="10" fill="#FFCB05" stroke="#000000" stroke-opacity=".35" stroke-width="2"/>
+<circle class="pulse" cx="228" cy="40" r="10" fill="#3DDC84" stroke="#000000" stroke-opacity=".35" stroke-width="2"/>
+
+<text x="166" y="102" class="sans" font-size="46" font-weight="800" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Cobblemon Rejects</text>
+<text x="168" y="134" class="mono" font-size="17" font-weight="400" fill="#FFFFFF" text-anchor="start" letter-spacing="1" fill-opacity="0.85">No. 001 · COMMERCIAL MINECRAFT NETWORK · LEAD DEVELOPER</text>
+
+<rect x="878" y="58" width="270" height="42" rx="21" fill="#000000" fill-opacity=".28"/>
+<circle class="pulse" cx="904" cy="79" r="7" fill="#3DDC84"/>
+<text x="922" y="85" class="mono" font-size="17" font-weight="700" fill="#F3F4F7" text-anchor="start" letter-spacing="1">LIVE IN PRODUCTION</text>
+
+<rect x="40" y="176" width="1120" height="474" rx="18" fill="#E9E9EE"/>
+<circle cx="580" cy="194" r="6" fill="#E3350D"/>
+<circle cx="620" cy="194" r="6" fill="#E3350D"/>
+<rect x="64" y="210" width="1072" height="416" rx="10" fill="#0B1120"/>
+<rect x="64" y="210" width="1072" height="416" rx="10" fill="url(#scan)"/>
+
+<text x="88" y="246" class="mono" font-size="15" font-weight="700" fill="#FFCB05" text-anchor="start" letter-spacing="3">ROUTE MAP</text>
+<text x="470" y="270" class="mono" font-size="14" font-weight="400" fill="#98A0B3" text-anchor="start" letter-spacing="1">PURE FABRIC 1.21.1</text>
+<text x="694" y="270" class="mono" font-size="14" font-weight="400" fill="#98A0B3" text-anchor="start" letter-spacing="1">SHARED STATE</text>
+<line x1="822" y1="232" x2="822" y2="604" stroke="#FFFFFF" stroke-opacity=".08" stroke-width="2"/>
+<text x="846" y="246" class="mono" font-size="15" font-weight="700" fill="#FFCB05" text-anchor="start" letter-spacing="3">BASE STATS</text>
+
+<path d="M216 417 H256" fill="none" stroke="#2C3852" stroke-width="3"/><path class="flow" d="M216 417 H256" fill="none" stroke="#3D7DCA" stroke-width="3" stroke-linecap="round"/>
+<path d="M406 417 H438 V305 H470" fill="none" stroke="#2C3852" stroke-width="3"/><path class="flow" d="M406 417 H438 V305 H470" fill="none" stroke="#3D7DCA" stroke-width="3" stroke-linecap="round"/>
+<path d="M406 417 H438 V361 H470" fill="none" stroke="#2C3852" stroke-width="3"/><path class="flow" d="M406 417 H438 V361 H470" fill="none" stroke="#3D7DCA" stroke-width="3" stroke-linecap="round"/>
+<path d="M406 417 H438 V417 H470" fill="none" stroke="#2C3852" stroke-width="3"/><path class="flow" d="M406 417 H438 V417 H470" fill="none" stroke="#3D7DCA" stroke-width="3" stroke-linecap="round"/>
+<path d="M406 417 H438 V473 H470" fill="none" stroke="#2C3852" stroke-width="3"/><path class="flow" d="M406 417 H438 V473 H470" fill="none" stroke="#3D7DCA" stroke-width="3" stroke-linecap="round"/>
+<path d="M406 417 H438 V529 H470" fill="none" stroke="#2C3852" stroke-width="3"/><path class="flow" d="M406 417 H438 V529 H470" fill="none" stroke="#3D7DCA" stroke-width="3" stroke-linecap="round"/>
+<path d="M664 305 V529" stroke="#2C3852" stroke-width="3"/>
+<path d="M640 305 H664" fill="none" stroke="#2C3852" stroke-width="3"/><path class="flow" d="M640 305 H664" fill="none" stroke="#FFCB05" stroke-width="3" stroke-linecap="round"/>
+<path d="M640 361 H664" fill="none" stroke="#2C3852" stroke-width="3"/><path class="flow" d="M640 361 H664" fill="none" stroke="#FFCB05" stroke-width="3" stroke-linecap="round"/>
+<path d="M640 417 H664" fill="none" stroke="#2C3852" stroke-width="3"/><path class="flow" d="M640 417 H664" fill="none" stroke="#FFCB05" stroke-width="3" stroke-linecap="round"/>
+<path d="M640 473 H664" fill="none" stroke="#2C3852" stroke-width="3"/><path class="flow" d="M640 473 H664" fill="none" stroke="#FFCB05" stroke-width="3" stroke-linecap="round"/>
+<path d="M640 529 H664" fill="none" stroke="#2C3852" stroke-width="3"/><path class="flow" d="M640 529 H664" fill="none" stroke="#FFCB05" stroke-width="3" stroke-linecap="round"/>
+<path d="M664 304 H694" fill="none" stroke="#2C3852" stroke-width="3"/><path class="flow" d="M664 304 H694" fill="none" stroke="#FFCB05" stroke-width="3" stroke-linecap="round"/>
+<path d="M664 404 H694" fill="none" stroke="#2C3852" stroke-width="3"/><path class="flow" d="M664 404 H694" fill="none" stroke="#FFCB05" stroke-width="3" stroke-linecap="round"/>
+<path d="M664 504 H694" fill="none" stroke="#2C3852" stroke-width="3"/><path class="flow" d="M664 504 H694" fill="none" stroke="#FFCB05" stroke-width="3" stroke-linecap="round"/>
+
+<rect x="96" y="395" width="120" height="44" rx="22" fill="#0B1120" stroke="#FFCB05" stroke-width="2"/>
+<text x="156" y="423" class="mono" font-size="16" font-weight="700" fill="#F3F4F7" text-anchor="middle" letter-spacing="0">PLAYERS</text>
+<rect x="256" y="383" width="150" height="68" rx="8" fill="#1C2030" stroke="#3D7DCA" stroke-width="2"/>
+<text x="331" y="415" class="mono" font-size="18" font-weight="700" fill="#F3F4F7" text-anchor="middle" letter-spacing="0">VELOCITY</text>
+<text x="331" y="437" class="mono" font-size="14" font-weight="400" fill="#98A0B3" text-anchor="middle" letter-spacing="0">single entry</text>
+<g>
+  <rect x="470" y="282" width="170" height="46" rx="8" fill="#1C2030" stroke="#FFFFFF" stroke-opacity=".14"/>
+  <rect x="470" y="282" width="7" height="46" rx="2" fill="#FFCB05"/>
+  <text x="492" y="311" class="mono" font-size="17" font-weight="700" fill="#F3F4F7" text-anchor="start" letter-spacing="0">HUB</text>
+</g>
+<g>
+  <rect x="470" y="338" width="170" height="46" rx="8" fill="#1C2030" stroke="#FFFFFF" stroke-opacity=".14"/>
+  <rect x="470" y="338" width="7" height="46" rx="2" fill="#3DDC84"/>
+  <text x="492" y="367" class="mono" font-size="17" font-weight="700" fill="#F3F4F7" text-anchor="start" letter-spacing="0">PEACEFUL</text>
+</g>
+<g>
+  <rect x="470" y="394" width="170" height="46" rx="8" fill="#1C2030" stroke="#FFFFFF" stroke-opacity=".14"/>
+  <rect x="470" y="394" width="7" height="46" rx="2" fill="#E3350D"/>
+  <text x="492" y="423" class="mono" font-size="17" font-weight="700" fill="#F3F4F7" text-anchor="start" letter-spacing="0">HARD</text>
+</g>
+<g>
+  <rect x="470" y="450" width="170" height="46" rx="8" fill="#1C2030" stroke="#FFFFFF" stroke-opacity=".14"/>
+  <rect x="470" y="450" width="7" height="46" rx="2" fill="#3D7DCA"/>
+  <text x="492" y="479" class="mono" font-size="17" font-weight="700" fill="#F3F4F7" text-anchor="start" letter-spacing="0">RESOURCE</text>
+</g>
+<g>
+  <rect x="470" y="506" width="170" height="46" rx="8" fill="#1C2030" stroke="#FFFFFF" stroke-opacity=".14"/>
+  <rect x="470" y="506" width="7" height="46" rx="2" fill="#A26BFA"/>
+  <text x="492" y="535" class="mono" font-size="17" font-weight="700" fill="#F3F4F7" text-anchor="start" letter-spacing="0">ADVENTURE</text>
+</g>
+<g>
+  <path d="M694 282 V318 A56 8 0 0 0 806 318 V282" fill="#1C2030" stroke="#E5534B" stroke-width="2"/>
+  <ellipse cx="750" cy="282" rx="56" ry="8" fill="#1C2030" stroke="#E5534B" stroke-width="2"/>
+  <text x="750" y="310" class="mono" font-size="15" font-weight="700" fill="#F3F4F7" text-anchor="middle" letter-spacing="0">REDIS</text>
+</g>
+<g>
+  <path d="M694 382 V418 A56 8 0 0 0 806 418 V382" fill="#1C2030" stroke="#C9A26B" stroke-width="2"/>
+  <ellipse cx="750" cy="382" rx="56" ry="8" fill="#1C2030" stroke="#C9A26B" stroke-width="2"/>
+  <text x="750" y="410" class="mono" font-size="15" font-weight="700" fill="#F3F4F7" text-anchor="middle" letter-spacing="0">MARIADB</text>
+</g>
+<g>
+  <path d="M694 482 V518 A56 8 0 0 0 806 518 V482" fill="#1C2030" stroke="#3DDC84" stroke-width="2"/>
+  <ellipse cx="750" cy="482" rx="56" ry="8" fill="#1C2030" stroke="#3DDC84" stroke-width="2"/>
+  <text x="750" y="510" class="mono" font-size="15" font-weight="700" fill="#F3F4F7" text-anchor="middle" letter-spacing="0">MONGODB</text>
+</g>
+
+<text x="846" y="304" class="mono" font-size="15" font-weight="400" fill="#98A0B3" text-anchor="start" letter-spacing="1">FABRIC BACKENDS</text>
+<text x="1108" y="306" class="sans" font-size="34" font-weight="800" fill="#F3F4F7" text-anchor="end" letter-spacing="0">5</text>
+<rect x="846" y="322" width="262" height="2" fill="#FFFFFF" fill-opacity=".06"/>
+<text x="846" y="366" class="mono" font-size="15" font-weight="400" fill="#98A0B3" text-anchor="start" letter-spacing="1">VELOCITY PROXY</text>
+<text x="1108" y="368" class="sans" font-size="34" font-weight="800" fill="#F3F4F7" text-anchor="end" letter-spacing="0">1</text>
+<rect x="846" y="384" width="262" height="2" fill="#FFFFFF" fill-opacity=".06"/>
+<text x="846" y="428" class="mono" font-size="15" font-weight="400" fill="#98A0B3" text-anchor="start" letter-spacing="1">CUSTOM MODS</text>
+<text x="1108" y="430" class="sans" font-size="34" font-weight="800" fill="#F3F4F7" text-anchor="end" letter-spacing="0">15</text>
+<rect x="846" y="446" width="262" height="2" fill="#FFFFFF" fill-opacity=".06"/>
+<text x="846" y="490" class="mono" font-size="15" font-weight="400" fill="#98A0B3" text-anchor="start" letter-spacing="1">DATASTORES</text>
+<text x="1108" y="492" class="sans" font-size="34" font-weight="800" fill="#F3F4F7" text-anchor="end" letter-spacing="0">3</text>
+<rect x="846" y="508" width="262" height="2" fill="#FFFFFF" fill-opacity=".06"/>
+<text x="846" y="552" class="mono" font-size="15" font-weight="400" fill="#98A0B3" text-anchor="start" letter-spacing="1">CLIENT-PACK MODS</text>
+<text x="1108" y="554" class="sans" font-size="34" font-weight="800" fill="#F3F4F7" text-anchor="end" letter-spacing="0">~120</text>
+<rect x="846" y="570" width="262" height="2" fill="#FFFFFF" fill-opacity=".06"/>
+
+<g fill="#1B1D24">
+  <rect x="64" y="704" width="28" height="84" rx="4"/>
+  <rect x="36" y="732" width="84" height="28" rx="4"/>
+</g>
+<circle cx="78" cy="746" r="7" fill="#FFFFFF" fill-opacity=".12"/>
+<text x="180" y="708" class="sans" font-size="22" font-weight="600" fill="#F3F4F7" text-anchor="start" letter-spacing="0">Party, PC, Pokédex, inventory, economy and location follow every player</text>
+<text x="180" y="740" class="sans" font-size="22" font-weight="600" fill="#F3F4F7" text-anchor="start" letter-spacing="0">across all five worlds, so the network plays as one place.</text>
+<rect x="180" y="782" width="92.05" height="30" rx="15" fill="#FF8A3D" stroke="#000000" stroke-opacity=".25" stroke-width="2"/>
+<text x="226.025" y="802" class="mono" font-size="15" font-weight="700" fill="#14161C" text-anchor="middle" letter-spacing="0">JAVA 21</text>
+<rect x="282.05" y="782" width="82.9" height="30" rx="15" fill="#DBD0B4" stroke="#000000" stroke-opacity=".25" stroke-width="2"/>
+<text x="323.5" y="802" class="mono" font-size="15" font-weight="700" fill="#14161C" text-anchor="middle" letter-spacing="0">FABRIC</text>
+<rect x="374.95000000000005" y="782" width="101.2" height="30" rx="15" fill="#3D7DCA" stroke="#000000" stroke-opacity=".25" stroke-width="2"/>
+<text x="425.55000000000007" y="802" class="mono" font-size="15" font-weight="700" fill="#14161C" text-anchor="middle" letter-spacing="0">VELOCITY</text>
+<rect x="486.15000000000003" y="782" width="73.75" height="30" rx="15" fill="#E5534B" stroke="#000000" stroke-opacity=".25" stroke-width="2"/>
+<text x="523.0250000000001" y="802" class="mono" font-size="15" font-weight="700" fill="#14161C" text-anchor="middle" letter-spacing="0">REDIS</text>
+<rect x="569.9000000000001" y="782" width="92.05" height="30" rx="15" fill="#C9A26B" stroke="#000000" stroke-opacity=".25" stroke-width="2"/>
+<text x="615.9250000000001" y="802" class="mono" font-size="15" font-weight="700" fill="#14161C" text-anchor="middle" letter-spacing="0">MARIADB</text>
+<rect x="671.95" y="782" width="92.05" height="30" rx="15" fill="#3DDC84" stroke="#000000" stroke-opacity=".25" stroke-width="2"/>
+<text x="717.975" y="802" class="mono" font-size="15" font-weight="700" fill="#14161C" text-anchor="middle" letter-spacing="0">MONGODB</text>
+<rect x="774" y="782" width="82.9" height="30" rx="15" fill="#2496ED" stroke="#000000" stroke-opacity=".25" stroke-width="2"/>
+<text x="815.45" y="802" class="mono" font-size="15" font-weight="700" fill="#14161C" text-anchor="middle" letter-spacing="0">DOCKER</text>
+<circle cx="1086" cy="724" r="22" fill="#1B1D24"/>
+<circle cx="1136" cy="760" r="22" fill="#1B1D24"/>
+<rect x="1060" y="796" width="34" height="10" rx="5" fill="#1B1D24"/>
+<rect x="1104" y="796" width="34" height="10" rx="5" fill="#1B1D24"/>
+
+</svg>

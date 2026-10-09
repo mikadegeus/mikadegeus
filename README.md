@@ -1,158 +1,39 @@
-<!-- ====================================================== -->
-<!--  Mika de Geus  ·  github.com/mikadegeus  ·  profile   -->
-<!-- ====================================================== -->
+<img src="assets/header.svg" width="100%" alt="Mika de Geus. Owner of MDG Developments since October 2026. Lead Developer at Cobblemon Rejects, Automation Specialist, AD Cybersecurity student at HvA. I build and run systems end to end: server software, web apps, the infrastructure underneath and the automation in between." />
 
-<div align="center">
+<p>
+  <a href="https://www.linkedin.com/in/mika-de-geus-a6238226b/"><img src="https://img.shields.io/badge/LinkedIn-Mika%20de%20Geus-0A66C2?style=for-the-badge" alt="LinkedIn: Mika de Geus" /></a>
+  <a href="mailto:mikadegeus@outlook.com"><img src="https://img.shields.io/badge/Email-mikadegeus%40outlook.com-E3350D?style=for-the-badge" alt="Email: mikadegeus@outlook.com" /></a>
+  <a href="https://discord.com/users/mikadegeus"><img src="https://img.shields.io/badge/Discord-mikadegeus-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord: mikadegeus" /></a>
+</p>
 
-<!-- Animated typing header -->
-<a href="https://github.com/mikadegeus">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&duration=2800&pause=900&color=7C5CFF&center=true&vCenter=true&width=760&height=80&lines=Hey%2C+I'm+Mika+%F0%9F%91%8B;Developer+%26+automation+builder;Minecraft+plugins+%2B+Next.js+apps;From+web+servers+to+cybersecurity;Always+building+something+%E2%9C%A8" alt="typing header" />
-</a>
+<img src="assets/cmrejects.svg" width="100%" alt="Cobblemon Rejects, a commercial Minecraft network live in production, where I am lead developer. A single Velocity proxy routes players to five pure Fabric 1.21.1 backends: hub, peaceful, hard, resource and adventure. Shared state lives in Redis, MariaDB and MongoDB. 5 Fabric backends, 1 Velocity proxy, 15 custom mods, 3 datastores, about 120 mods in the client pack. Party, PC, Pokédex, inventory, economy and location follow every player across all five worlds." />
+
+<img src="assets/handoff.svg" width="100%" alt="The cross-server handoff. 1, save: the source world saves the player, then marks them ready in Redis. 2, wait: the target world waits for that signal before it loads anything. 3, guard: every write carries a version, so a stale save never overwrites newer data. Result: no rollbacks, no lost items, one chat relayed across all five worlds." />
+
+<details>
+<summary><b>Cobblemon Rejects: the custom mods and how it runs</b></summary>
 
 <br/>
 
-<!-- Visitor counter + quick badges -->
-<img src="https://komarev.com/ghpvc/?username=mikadegeus&label=Profile%20views&color=7C5CFF&style=flat-square" alt="profile views" />
-&nbsp;
-<img src="https://img.shields.io/badge/Focus-Automation%20%26%20Game%20Dev-7C5CFF?style=flat-square" alt="focus" />
-&nbsp;
-<img src="https://img.shields.io/badge/Status-Open%20for%20projects-1F6FEB?style=flat-square" alt="status" />
+**Custom mods (Java 21, Fabric)**
 
-</div>
+- **Sync:** inventory, XP, health, stats and location over MariaDB, gated by the Redis handoff. Around 1,000 lines with JUnit unit and integration tests.
+- **Delivery:** hub-store purchases become pending credits that a player redeems on any survival world.
+- **Realms:** proxy-side command that routes a player to any backend by name.
+- **Vouchers:** economy vouchers on an unforgeable base item. Payouts are treated as untrusted input and clamped.
+- **Shop Limits:** a per-player daily sell cap that closes a buy, craft, sell-high exploit loop.
+- **Rank features:** per-rank PC boxes, cooldowns and rank badges, all driven by LuckPerms meta.
+- **Plus:** a server-side homes menu, a permission-filtered help index, legendary spawn tracking, arena border handling, Reject-form enforcement and quality-of-life commands.
 
----
+**Operations**
 
-## 🧙‍♂️ About me
+- Docker Compose runs the five backends, the proxy and three datastores as one reproducible stack on a dedicated server.
+- Caddy with Authelia TOTP forward-auth in front of every admin panel.
+- Nightly encrypted snapshots with an off-site copy, and a restore drill tested end to end.
+- World pregeneration, external uptime monitoring and a Discord bot for the community.
 
-I'm a developer who likes building things that actually *work*, and look good while doing it. My playground stretches across a few different worlds:
+</details>
 
-- 🎮 **Game development** &nbsp;Custom Minecraft plugins in Java on the Paper API: economies, ability systems with cooldowns, quest engines, party systems, and the kind of server-side glue that ties a whole game mode together.
-- ⚙️ **Automation** &nbsp;Web apps and pipelines that take repetitive work off people's plates. Think lead enrichment, proposal generation, and outreach flows, often wired together with tools like n8n and a layer of AI where it genuinely adds value.
-- 🌐 **Web & full-stack** &nbsp;Modern web apps with Next.js, React, TypeScript and Tailwind, backed by databases through Prisma. From the UI down to the data layer.
-- 🖥️ **Servers & infrastructure** &nbsp;Running and configuring web servers and game servers, Docker containers, Nginx reverse proxies and deployments, keeping things online, fast, and predictable.
-- 🔐 **Cybersecurity** &nbsp;A growing focus area: secure-by-default coding, input validation, auth flows, server hardening, and thinking like an attacker so the defense holds up.
+<img src="assets/elsewhere.svg" width="100%" alt="Automation Specialist in financial services (lending), automating the back office: bank statement checks, email handling and business credit proposals. AD Cybersecurity at HvA: pentesting, OSINT, risk analysis, network analysis and OT/ICS security. Web: the Studio Lumeza website, built with Astro as client work." />
 
-> Whether it's a Minecraft dungeon crawler, a cold-outreach pipeline, or locking down a server: if it can be built or automated, that's where you'll find me. I care about clean code, real reliability, and shipping things people actually use.
-
-I'm always learning, currently going deeper into security and infrastructure, and I love a project where I get to wear several hats at once.
-
----
-
-## 🛠️ Tech stack
-
-<div align="center">
-
-**Languages & Frameworks**
-
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
-![Paper](https://img.shields.io/badge/Paper%20MC-1A2530?style=for-the-badge&logo=spigotmc&logoColor=white)
-
-**Infrastructure & Security**
-
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
-![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
-![ngrok](https://img.shields.io/badge/ngrok-1F1E37?style=for-the-badge&logo=ngrok&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-
-</div>
-
----
-
-## 🚀 Featured projects
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 🗡️ Dungeoneers
-A custom **Java 21 / Paper 1.21** plugin that glues together a Minecraft Dungeons-style server: a coins economy, abilities with cooldowns, a quest and objective system, lives & checkpoints, a party system with shared progress, and a PlaceholderAPI bridge.
-
-`Java` · `Paper API` · `SQLite` · `PlaceholderAPI`
-
-[**→ View repo**](https://github.com/mikadegeus/dungeoneers-plugin)
-
-</td>
-<td width="50%" valign="top">
-
-### 🧱 Minecraft Plugin Suite
-A growing collection of custom Paper plugins: a prison-server core, a shop system, custom scoreboards, and more, each solving a specific server need in clean, self-contained Java.
-
-`Java` · `Paper API` · `Spigot`
-
-[**→ Prison Core**](https://github.com/mikadegeus/Prisoncore-minecraft) · [**Shop**](https://github.com/mikadegeus/shop-plugin-for-minecraft) · [**PixelForge**](https://github.com/mikadegeus/pixelforge-plugin-for-minecraft)
-
-</td>
-</tr>
-</table>
-
----
-
-## 📊 GitHub stats
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=mikadegeus&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="github stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mikadegeus&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="top languages" />
-
-<br/><br/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=mikadegeus&theme=tokyonight&hide_border=true" alt="github streak" />
-
-</div>
-
----
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mikadegeus/mikadegeus/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mikadegeus/mikadegeus/output/github-contribution-grid-snake.svg" />
-  <img alt="contribution snake animation" src="https://raw.githubusercontent.com/mikadegeus/mikadegeus/output/github-contribution-grid-snake.svg" />
-</picture>
-
-</div>
-
----
-
-## 🤝 Let's connect
-
-<div align="center">
-
-<a href="https://www.linkedin.com/in/mika-de-geus-a6238226b/">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-</a>
-<a href="https://www.instagram.com/mikadegeus_/">
-  <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
-</a>
-<a href="https://discord.com/users/mikadegeus">
-  <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
-</a>
-<a href="mailto:mikadegeus@outlook.com">
-  <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-</a>
-
-<br/><br/>
-
-<sub>💬 Discord: <b>mikadegeus</b> &nbsp;·&nbsp; ✉️ <b>mikadegeus@outlook.com</b></sub>
-
-</div>
-
----
-
-<div align="center">
-<sub>⭐️ Thanks for stopping by. Go build something cool today.</sub>
-</div>
+<img src="assets/toolbox.svg" width="100%" alt="Toolbox. Languages: Java, TypeScript, JavaScript, Python, SQL, Bash. Game servers: Fabric, Velocity, Paper, Gradle, JUnit 5, LuckPerms. Web: Astro, React, Next.js, Express, Vite, Tailwind CSS, Prisma, Firebase. Data and infra: Redis, MariaDB, MongoDB, Docker, Linux, Caddy, Nginx, Cloudflare. Automation: n8n, Puppeteer, Python scripting. Security: Burp Suite, nmap, Wireshark, Scapy, Authelia, OWASP, ISO 27001, MITRE ATT&CK." />
