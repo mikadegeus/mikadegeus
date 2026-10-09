@@ -6,14 +6,18 @@
   <a href="https://discord.com/users/mikadegeus"><img src="https://img.shields.io/badge/Discord-mikadegeus-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord: mikadegeus" /></a>
 </p>
 
-<img src="assets/cmrejects.svg" width="100%" alt="Cobblemon Rejects, a commercial Minecraft network live in production, where I am lead developer. A single Velocity proxy routes players to five pure Fabric 1.21.1 backends: hub, peaceful, hard, resource and adventure. Shared state lives in Redis, MariaDB and MongoDB. 5 Fabric backends, 1 Velocity proxy, 15 custom mods, 3 datastores, about 120 mods in the client pack. Party, PC, Pokédex, inventory, economy and location follow every player across all five worlds." />
+<img src="assets/what-i-do.svg" width="100%" alt="What I do. Game servers and infrastructure: Lead Developer at Cobblemon Rejects, a Minecraft network. A Velocity proxy and 5 Fabric backends, 15 custom server-side mods in Java 21, cross-server sync over Redis, MariaDB and MongoDB, Docker operations with encrypted backups and 2FA, and a Discord bot for the community. Automation Specialist in financial services (lending): bank statement checks, email handling and business credit proposals. Security, AD Cybersecurity at HvA: pentesting, OSINT, risk analysis, network and OT/ICS security. Web: the Studio Lumeza website, built with Astro as client work." />
 
-<img src="assets/handoff.svg" width="100%" alt="The cross-server handoff. 1, save: the source world saves the player, then marks them ready in Redis. 2, wait: the target world waits for that signal before it loads anything. 3, guard: every write carries a version, so a stale save never overwrites newer data. Result: no rollbacks, no lost items, one chat relayed across all five worlds." />
+<img src="assets/cmrejects.svg" width="100%" alt="Featured project: Cobblemon Rejects, a Minecraft network where I am lead developer, covering architecture, mods and operations. A single Velocity proxy routes players to five pure Fabric 1.21.1 backends: hub, peaceful, hard, resource and adventure. Shared state lives in Redis, MariaDB and MongoDB. What I built: the architecture, 15 custom mods in Java 21, the sync layer and the operations with Docker, backups and 2FA. The hard part: a version-guarded Redis handoff, so switching worlds never rolls a player back." />
 
 <details>
-<summary><b>Cobblemon Rejects: the custom mods and how it runs</b></summary>
+<summary><b>Cobblemon Rejects in depth: the handoff, the mods and how it runs</b></summary>
 
 <br/>
+
+**The handoff**
+
+Party, PC, Pokédex, inventory, economy and location follow every player across all five worlds. Switching worlds is where that usually breaks: the target loads the player before the source has finished saving. So the source saves and marks the player ready in Redis, the target waits for that signal before it loads, and every write carries a version so a stale save can never overwrite newer data. The same Redis channel relays one shared chat across all worlds.
 
 **Custom mods (Java 21, Fabric)**
 
@@ -33,7 +37,5 @@
 - World pregeneration, external uptime monitoring and a Discord bot for the community.
 
 </details>
-
-<img src="assets/elsewhere.svg" width="100%" alt="Automation Specialist in financial services (lending), automating the back office: bank statement checks, email handling and business credit proposals. AD Cybersecurity at HvA: pentesting, OSINT, risk analysis, network analysis and OT/ICS security. Web: the Studio Lumeza website, built with Astro as client work." />
 
 <img src="assets/toolbox.svg" width="100%" alt="Toolbox. Languages: Java, TypeScript, JavaScript, Python, SQL, Bash. Game servers: Fabric, Velocity, Paper, Gradle, JUnit 5, LuckPerms. Web: Astro, React, Next.js, Express, Vite, Tailwind CSS, Prisma, Firebase. Data and infra: Redis, MariaDB, MongoDB, Docker, Linux, Caddy, Nginx, Cloudflare. Automation: n8n, Puppeteer, Python scripting. Security: Burp Suite, nmap, Wireshark, Scapy, Authelia, OWASP, ISO 27001, MITRE ATT&CK." />

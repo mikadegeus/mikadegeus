@@ -143,9 +143,68 @@ ${cells.join("\n")}
   });
 }
 
+// ---------------------------------------------------------------- what I do
+function whatIDo() {
+  const W = 1200, H = 440;
+  const card = (x, y, w, h, accent) =>
+    `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="20" fill="${C.ink}"/>
+<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="20" fill="url(#dots)"/>
+<rect x="${x + 28}" y="${y}" width="64" height="5" fill="${accent}"/>`;
+
+  const gameItems = [
+    "Velocity proxy and 5 Fabric backends",
+    "15 custom server-side mods in Java 21",
+    "Cross-server sync: Redis, MariaDB, MongoDB",
+    "Docker ops, encrypted backups, 2FA",
+    "A Discord bot for the community",
+  ];
+  const gameRows = gameItems.map((item, i) => {
+    const y = 170 + i * 52;
+    return `<rect x="28" y="${y - 27}" width="532" height="42" rx="10" fill="${C.panelHi}"/>
+${text(48, y, `0${i + 1}`, { size: 16, weight: 700, fill: C.red })}
+${text(92, y + 1, item, { size: 20, cls: "sans", weight: 600 })}`;
+  });
+
+  const processes = ["Bank statement checks", "Email handling", "Business credit proposals"];
+  const procRows = processes.map((p, i) =>
+    `${text(640, 130 + i * 28, `0${i + 1}`, { size: 16, weight: 700, fill: C.blue })}
+${text(684, 130 + i * 28, p, { size: 17 })}`);
+
+  const body = `
+${card(0, 0, 588, H, C.red)}
+${text(28, 52, "GAME SERVERS & INFRA", { size: 16, fill: C.red, spacing: 3, weight: 700 })}
+${text(28, 94, "Lead Developer", { size: 34, cls: "sans", weight: 800 })}
+${text(28, 122, "Cobblemon Rejects · Minecraft network", { size: 16, fill: C.muted })}
+${gameRows.join("\n")}
+
+${card(612, 0, 588, 212, C.blue)}
+${text(640, 52, "AUTOMATION SPECIALIST", { size: 16, fill: C.blue, spacing: 3, weight: 700 })}
+${text(640, 90, "Financial services · lending", { size: 28, cls: "sans", weight: 800 })}
+${procRows.join("\n")}
+
+${card(612, 228, 288, 212, C.orange)}
+${text(640, 280, "SECURITY", { size: 16, fill: C.orange, spacing: 3, weight: 700 })}
+${text(640, 306, "AD CYBERSECURITY · HVA", { size: 14, fill: C.muted })}
+${text(640, 346, "Pentesting · OSINT", { size: 20, cls: "sans", weight: 600 })}
+${text(640, 376, "Risk analysis", { size: 20, cls: "sans", weight: 600 })}
+${text(640, 406, "Network · OT/ICS", { size: 20, cls: "sans", weight: 600 })}
+
+${card(912, 228, 288, 212, C.yellow)}
+${text(940, 280, "WEB", { size: 16, fill: C.yellow, spacing: 3, weight: 700 })}
+${text(940, 340, "Studio Lumeza", { size: 28, cls: "sans", weight: 800 })}
+${text(940, 372, "Website · Astro", { size: 15, fill: C.muted })}
+${text(940, 396, "Client work", { size: 15, fill: C.muted })}
+`;
+  return svgDoc({
+    w: W, h: H, body,
+    title: "What I do",
+    desc: "Game servers and infrastructure: Lead Developer at Cobblemon Rejects, a Minecraft network. A Velocity proxy and 5 Fabric backends, 15 custom server-side mods in Java 21, cross-server sync over Redis, MariaDB and MongoDB, Docker operations with encrypted backups and 2FA, and a Discord bot for the community. Automation Specialist in financial services (lending): bank statement checks, email handling and business credit proposals. Security, AD Cybersecurity at HvA: pentesting, OSINT, risk analysis, network and OT/ICS security. Web: the Studio Lumeza website, built with Astro as client work.",
+  });
+}
+
 // ---------------------------------------------------------------- pokedex
 function pokedex() {
-  const W = 1200, H = 850;
+  const W = 1200, H = 560;
 
   const backends = [
     { name: "HUB", color: C.yellow },
@@ -154,41 +213,34 @@ function pokedex() {
     { name: "RESOURCE", color: C.blue },
     { name: "ADVENTURE", color: C.purple },
   ];
-  const bx = 470, bw = 170, bh = 46, by0 = 282, bstep = 56;
-  const midY = by0 + (bstep * (backends.length - 1)) / 2 + bh / 2; // 417
+  const bx = 470, bw = 170, bh = 34, by0 = 262, bstep = 42;
+  const midY = by0 + (bstep * (backends.length - 1)) / 2 + bh / 2;
   const busX = 664;
 
   const backendNodes = backends.map((b, i) => {
     const y = by0 + i * bstep, cy = y + bh / 2;
     return `<g>
-  <rect x="${bx}" y="${y}" width="${bw}" height="${bh}" rx="8" fill="${C.panelHi}" stroke="#FFFFFF" stroke-opacity=".14"/>
+  <rect x="${bx}" y="${y}" width="${bw}" height="${bh}" rx="7" fill="${C.panelHi}" stroke="#FFFFFF" stroke-opacity=".14"/>
   <rect x="${bx}" y="${y}" width="7" height="${bh}" rx="2" fill="${b.color}"/>
-  ${text(bx + 22, cy + 6, b.name, { size: 17, weight: 700 })}
+  ${text(bx + 22, cy + 6, b.name, { size: 16, weight: 700 })}
 </g>`;
   });
-
-  const proxyEdges = backends.map((_, i) => {
-    const cy = by0 + i * bstep + bh / 2;
-    return `M406 ${midY} H438 V${cy} H${bx}`;
-  });
-  const busEdges = backends.map((_, i) => {
-    const cy = by0 + i * bstep + bh / 2;
-    return `M${bx + bw} ${cy} H${busX}`;
-  });
+  const proxyEdges = backends.map((_, i) => `M406 ${midY} H438 V${by0 + i * bstep + bh / 2} H${bx}`);
+  const busEdges = backends.map((_, i) => `M${bx + bw} ${by0 + i * bstep + bh / 2} H${busX}`);
 
   const stores = [
-    { name: "REDIS", note: "handoff · chat", color: "#E5534B" },
-    { name: "MARIADB", note: "player state", color: "#C9A26B" },
-    { name: "MONGODB", note: "Cobblemon data", color: C.green },
+    { name: "REDIS", color: "#E5534B" },
+    { name: "MARIADB", color: "#C9A26B" },
+    { name: "MONGODB", color: C.green },
   ];
   const sx = 694, sw = 112;
-  const storeYs = [300, 400, 500];
+  const storeYs = [midY - 68, midY, midY + 68];
   const storeNodes = stores.map((s, i) => {
-    const top = storeYs[i] - 26;
+    const top = storeYs[i] - 22;
     return `<g>
-  <path d="M${sx} ${top + 8} V${top + 44} A${sw / 2} 8 0 0 0 ${sx + sw} ${top + 44} V${top + 8}" fill="${C.panelHi}" stroke="${s.color}" stroke-width="2"/>
-  <ellipse cx="${sx + sw / 2}" cy="${top + 8}" rx="${sw / 2}" ry="8" fill="${C.panelHi}" stroke="${s.color}" stroke-width="2"/>
-  ${text(sx + sw / 2, top + 36, s.name, { size: 15, weight: 700, anchor: "middle" })}
+  <path d="M${sx} ${top + 7} V${top + 37} A${sw / 2} 7 0 0 0 ${sx + sw} ${top + 37} V${top + 7}" fill="${C.panelHi}" stroke="${s.color}" stroke-width="2"/>
+  <ellipse cx="${sx + sw / 2}" cy="${top + 7}" rx="${sw / 2}" ry="7" fill="${C.panelHi}" stroke="${s.color}" stroke-width="2"/>
+  ${text(sx + sw / 2, top + 32, s.name, { size: 14, weight: 700, anchor: "middle" })}
 </g>`;
   });
   const storeEdges = storeYs.map((y) => `M${busX} ${y + 4} H${sx}`);
@@ -196,68 +248,48 @@ function pokedex() {
   const edge = (d, color) =>
     `<path d="${d}" fill="none" stroke="#2C3852" stroke-width="3"/><path class="flow" d="${d}" fill="none" stroke="${color}" stroke-width="3" stroke-linecap="round"/>`;
 
-  const stats = [
-    ["5", "FABRIC BACKENDS"],
-    ["1", "VELOCITY PROXY"],
-    ["15", "CUSTOM MODS"],
-    ["3", "DATASTORES"],
-    ["~120", "CLIENT-PACK MODS"],
+  const built = [
+    ["ARCHITECTURE", "Proxy + 5 Fabric backends"],
+    ["CUSTOM MODS", "15 mods in Java 21"],
+    ["SYNC LAYER", "Redis · MariaDB · MongoDB"],
+    ["OPERATIONS", "Docker · backups · 2FA"],
   ];
-  const statRows = stats.map(([v, l], i) => {
-    const y = 304 + i * 62;
-    return `${text(846, y, l, { size: 15, fill: C.muted, spacing: 1 })}
-${text(1108, y + 2, v, { size: 34, cls: "sans", weight: 800, anchor: "end" })}
-<rect x="846" y="${y + 18}" width="262" height="2" fill="#FFFFFF" fill-opacity=".06"/>`;
-  });
-
-  const types = [
-    { label: "JAVA 21", color: C.orange },
-    { label: "FABRIC", color: "#DBD0B4" },
-    { label: "VELOCITY", color: C.blue },
-    { label: "REDIS", color: "#E5534B" },
-    { label: "MARIADB", color: "#C9A26B" },
-    { label: "MONGODB", color: C.green },
-    { label: "DOCKER", color: "#2496ED" },
-  ];
-  let tx = 180;
-  const typePills = types.map((t) => {
-    const w = monoWidth(t.label, 15) + 28;
-    const svg = `<rect x="${tx}" y="782" width="${w}" height="30" rx="15" fill="${t.color}" stroke="#000000" stroke-opacity=".25" stroke-width="2"/>
-${text(tx + w / 2, 802, t.label, { size: 15, weight: 700, anchor: "middle", fill: "#14161C" })}`;
-    tx += w + 10;
-    return svg;
+  const builtRows = built.map(([label, value], i) => {
+    const y = 262 + i * 52;
+    return `${text(846, y, label, { size: 14, fill: C.muted, spacing: 1 })}
+${text(846, y + 24, value, { size: 19, cls: "sans", weight: 700 })}`;
   });
 
   const body = `
 <rect width="${W}" height="${H}" rx="28" fill="url(#shell)"/>
 <rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="22" fill="none" stroke="#FFFFFF" stroke-opacity=".18" stroke-width="2"/>
-<path d="M28 158 H640 L684 146 H1172" fill="none" stroke="#000000" stroke-opacity=".28" stroke-width="3"/>
+<path d="M28 150 H640 L684 140 H1172" fill="none" stroke="#000000" stroke-opacity=".28" stroke-width="3"/>
 
-<circle cx="92" cy="80" r="50" fill="#F4F4F6" stroke="#000000" stroke-opacity=".3" stroke-width="3"/>
-<circle cx="92" cy="80" r="40" fill="url(#lens)"/>
-<ellipse cx="78" cy="64" rx="12" ry="8" fill="#FFFFFF" fill-opacity=".7"/>
-<circle cx="172" cy="40" r="10" fill="#FF4B4B" stroke="#000000" stroke-opacity=".35" stroke-width="2"/>
-<circle cx="200" cy="40" r="10" fill="${C.yellow}" stroke="#000000" stroke-opacity=".35" stroke-width="2"/>
-<circle class="pulse" cx="228" cy="40" r="10" fill="${C.green}" stroke="#000000" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="88" cy="76" r="46" fill="#F4F4F6" stroke="#000000" stroke-opacity=".3" stroke-width="3"/>
+<circle cx="88" cy="76" r="36" fill="url(#lens)"/>
+<ellipse cx="75" cy="61" rx="11" ry="7" fill="#FFFFFF" fill-opacity=".7"/>
+<circle cx="164" cy="38" r="9" fill="#FF4B4B" stroke="#000000" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="190" cy="38" r="9" fill="${C.yellow}" stroke="#000000" stroke-opacity=".35" stroke-width="2"/>
+<circle class="pulse" cx="216" cy="38" r="9" fill="${C.green}" stroke="#000000" stroke-opacity=".35" stroke-width="2"/>
 
-${text(166, 102, "Cobblemon Rejects", { size: 46, cls: "sans", weight: 800 })}
-${text(168, 134, "No. 001 · COMMERCIAL MINECRAFT NETWORK · LEAD DEVELOPER", { size: 17, fill: "#FFFFFF", opacity: 0.85, spacing: 1 })}
+${text(158, 98, "Cobblemon Rejects", { size: 42, cls: "sans", weight: 800 })}
+${text(160, 128, "MY ROLE: LEAD DEVELOPER · ARCHITECTURE, MODS AND OPERATIONS", { size: 16, fill: "#FFFFFF", opacity: 0.85, spacing: 1 })}
 
-<rect x="878" y="58" width="270" height="42" rx="21" fill="#000000" fill-opacity=".28"/>
-<circle class="pulse" cx="904" cy="79" r="7" fill="${C.green}"/>
-${text(922, 85, "LIVE IN PRODUCTION", { size: 17, weight: 700, spacing: 1 })}
+<rect x="902" y="54" width="246" height="40" rx="20" fill="#000000" fill-opacity=".28"/>
+<rect x="924" y="68" width="12" height="12" fill="${C.yellow}"/>
+${text(948, 80, "FEATURED PROJECT", { size: 16, weight: 700, spacing: 1 })}
 
-<rect x="40" y="176" width="1120" height="474" rx="18" fill="#E9E9EE"/>
-<circle cx="580" cy="194" r="6" fill="${C.red}"/>
-<circle cx="620" cy="194" r="6" fill="${C.red}"/>
-<rect x="64" y="210" width="1072" height="416" rx="10" fill="${C.screen}"/>
-<rect x="64" y="210" width="1072" height="416" rx="10" fill="url(#scan)"/>
+<rect x="40" y="164" width="1120" height="330" rx="18" fill="#E9E9EE"/>
+<circle cx="580" cy="180" r="5" fill="${C.red}"/>
+<circle cx="620" cy="180" r="5" fill="${C.red}"/>
+<rect x="64" y="194" width="1072" height="286" rx="10" fill="${C.screen}"/>
+<rect x="64" y="194" width="1072" height="286" rx="10" fill="url(#scan)"/>
 
-${text(88, 246, "ROUTE MAP", { size: 15, fill: C.yellow, spacing: 3, weight: 700 })}
-${text(470, 270, "PURE FABRIC 1.21.1", { size: 14, fill: C.muted, spacing: 1 })}
-${text(694, 270, "SHARED STATE", { size: 14, fill: C.muted, spacing: 1 })}
-<line x1="822" y1="232" x2="822" y2="604" stroke="#FFFFFF" stroke-opacity=".08" stroke-width="2"/>
-${text(846, 246, "BASE STATS", { size: 15, fill: C.yellow, spacing: 3, weight: 700 })}
+${text(88, 226, "ROUTE MAP", { size: 15, fill: C.yellow, spacing: 3, weight: 700 })}
+${text(470, 248, "PURE FABRIC 1.21.1", { size: 13, fill: C.muted, spacing: 1 })}
+${text(694, 248, "SHARED STATE", { size: 13, fill: C.muted, spacing: 1 })}
+<line x1="822" y1="212" x2="822" y2="462" stroke="#FFFFFF" stroke-opacity=".08" stroke-width="2"/>
+${text(846, 226, "WHAT I BUILT", { size: 15, fill: C.yellow, spacing: 3, weight: 700 })}
 
 ${edge(`M216 ${midY} H256`, C.blue)}
 ${proxyEdges.map((d) => edge(d, C.blue)).join("\n")}
@@ -265,28 +297,21 @@ ${proxyEdges.map((d) => edge(d, C.blue)).join("\n")}
 ${busEdges.map((d) => edge(d, C.yellow)).join("\n")}
 ${storeEdges.map((d) => edge(d, C.yellow)).join("\n")}
 
-<rect x="96" y="${midY - 22}" width="120" height="44" rx="22" fill="${C.screen}" stroke="${C.yellow}" stroke-width="2"/>
-${text(156, midY + 6, "PLAYERS", { size: 16, weight: 700, anchor: "middle" })}
-<rect x="256" y="${midY - 34}" width="150" height="68" rx="8" fill="${C.panelHi}" stroke="${C.blue}" stroke-width="2"/>
-${text(331, midY - 2, "VELOCITY", { size: 18, weight: 700, anchor: "middle" })}
-${text(331, midY + 20, "single entry", { size: 14, fill: C.muted, anchor: "middle" })}
+<rect x="96" y="${midY - 20}" width="120" height="40" rx="20" fill="${C.screen}" stroke="${C.yellow}" stroke-width="2"/>
+${text(156, midY + 6, "PLAYERS", { size: 15, weight: 700, anchor: "middle" })}
+<rect x="256" y="${midY - 30}" width="150" height="60" rx="8" fill="${C.panelHi}" stroke="${C.blue}" stroke-width="2"/>
+${text(331, midY - 2, "VELOCITY", { size: 17, weight: 700, anchor: "middle" })}
+${text(331, midY + 18, "single entry", { size: 13, fill: C.muted, anchor: "middle" })}
 ${backendNodes.join("\n")}
 ${storeNodes.join("\n")}
 
-${statRows.join("\n")}
+${builtRows.join("\n")}
 
-<g fill="#1B1D24">
-  <rect x="64" y="704" width="28" height="84" rx="4"/>
-  <rect x="36" y="732" width="84" height="28" rx="4"/>
-</g>
-<circle cx="78" cy="746" r="7" fill="#FFFFFF" fill-opacity=".12"/>
-${text(180, 708, "Party, PC, Pokédex, inventory, economy and location follow every player", { size: 22, cls: "sans", weight: 600 })}
-${text(180, 740, "across all five worlds, so the network plays as one place.", { size: 22, cls: "sans", weight: 600 })}
-${typePills.join("\n")}
-<circle cx="1086" cy="724" r="22" fill="#1B1D24"/>
-<circle cx="1136" cy="760" r="22" fill="#1B1D24"/>
-<rect x="1060" y="796" width="34" height="10" rx="5" fill="#1B1D24"/>
-<rect x="1104" y="796" width="34" height="10" rx="5" fill="#1B1D24"/>
+<rect x="56" y="512" width="12" height="12" fill="${C.yellow}"/>
+${text(80, 524, "THE HARD PART", { size: 15, weight: 800, fill: C.yellow, spacing: 2 })}
+${text(236, 525, "a version-guarded Redis handoff, so switching worlds never rolls a player back.", { size: 19, cls: "sans", weight: 600 })}
+<circle cx="1112" cy="518" r="14" fill="#1B1D24"/>
+<circle cx="1146" cy="518" r="14" fill="#1B1D24"/>
 `;
   const defs = `
 <linearGradient id="shell" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EA4220"/><stop offset="1" stop-color="#B8290B"/></linearGradient>
@@ -294,98 +319,8 @@ ${typePills.join("\n")}
 <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#FFFFFF" fill-opacity=".035"/></pattern>`;
   return svgDoc({
     w: W, h: H, defs, body,
-    title: "Cobblemon Rejects: network overview",
-    desc: "Cobblemon Rejects, a commercial Minecraft network that is live in production, where Mika is lead developer. Players connect through a single Velocity proxy that routes them to five pure Fabric 1.21.1 backends: hub, peaceful, hard, resource and adventure. Shared state lives in Redis (handoff and chat), MariaDB (player state) and MongoDB (Cobblemon data). Base stats: 5 Fabric backends, 1 Velocity proxy, 15 custom mods, 3 datastores, about 120 mods in the client pack. Party, PC, Pokédex, inventory, economy and location follow every player across all five worlds. Stack: Java 21, Fabric, Velocity, Redis, MariaDB, MongoDB, Docker.",
-  });
-}
-
-// ---------------------------------------------------------------- handoff
-function handoff() {
-  const W = 1200, H = 420;
-  const steps = [
-    { n: "01", t: "SAVE", lines: ["Source world saves the", "player, then marks them", "READY in Redis."] },
-    { n: "02", t: "WAIT", lines: ["Target world waits for", "READY before it loads", "anything."] },
-    { n: "03", t: "GUARD", lines: ["Every write carries a", "version. A stale save", "never overwrites newer", "data."] },
-  ];
-  const bw = 344, gap = 28, by = 140, bh = 174;
-  const boxes = steps.map((s, i) => {
-    const x = 56 + i * (bw + gap);
-    const lines = s.lines.map((l, j) => text(x + 28, by + 80 + j * 26, l, { size: 17, fill: "#1E2030" })).join("\n");
-    const blink = i === steps.length - 1
-      ? `<rect class="blink" x="${x + bw - 34}" y="${by + bh - 32}" width="12" height="12" fill="${C.red}"/>`
-      : "";
-    return `<g>
-  <rect x="${x}" y="${by}" width="${bw}" height="${bh}" rx="14" fill="#F8F8F8" stroke="#2B2D42" stroke-width="4"/>
-  <rect x="${x + 8}" y="${by + 8}" width="${bw - 16}" height="${bh - 16}" rx="9" fill="none" stroke="#8A8FA8" stroke-width="2"/>
-  ${text(x + 28, by + 44, `${s.n}  ${s.t}`, { size: 18, weight: 800, fill: C.red, spacing: 2 })}
-  ${lines}
-  ${blink}
-</g>`;
-  });
-  const connectors = [0, 1].map((i) => {
-    const x1 = 56 + (i + 1) * bw + i * gap;
-    return `<path class="flow" d="M${x1 + 2} ${by + bh / 2} H${x1 + gap - 2}" stroke="${C.yellow}" stroke-width="4"/>`;
-  });
-
-  const body = `
-<rect width="${W}" height="${H}" rx="20" fill="${C.ink}"/>
-<rect width="${W}" height="${H}" rx="20" fill="url(#dots)"/>
-${text(56, 62, "CMREJECTS · THE HARD PART", { size: 16, fill: C.yellow, spacing: 3, weight: 700 })}
-${text(54, 110, "The cross-server handoff", { size: 42, cls: "sans", weight: 800 })}
-${text(1144, 110, "Without it: rollbacks and lost items on every world switch.", { size: 18, cls: "sans", fill: C.muted, anchor: "end" })}
-${boxes.join("\n")}
-${connectors.join("\n")}
-<rect x="56" y="344" width="1088" height="48" rx="10" fill="${C.green}" fill-opacity=".1" stroke="${C.green}" stroke-opacity=".6" stroke-width="2"/>
-${text(80, 374, "RESULT", { size: 17, weight: 800, fill: C.green, spacing: 2 })}
-${text(170, 374, "no rollbacks · no lost items · one chat relayed across all five worlds", { size: 17 })}
-`;
-  return svgDoc({
-    w: W, h: H, body,
-    title: "The cross-server handoff",
-    desc: "How Cobblemon Rejects moves a player between worlds without rollbacks or lost items. Step 1, save: the source world saves the player, then marks them ready in Redis. Step 2, wait: the target world waits for that ready signal before it loads anything. Step 3, guard: every write carries a version, so a stale save never overwrites newer data. Result: no rollbacks, no lost items, and one chat relayed across all five worlds.",
-  });
-}
-
-// ---------------------------------------------------------------- elsewhere
-function elsewhere() {
-  const W = 1200, H = 380;
-  const card = (x, y, w, h, accent) =>
-    `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="20" fill="${C.ink}"/>
-<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="20" fill="url(#dots)"/>
-<rect x="${x + 28}" y="${y}" width="64" height="5" fill="${accent}"/>`;
-
-  const processes = ["Bank statement checks", "Email handling", "Business credit proposals"];
-  const procRows = processes.map((p, i) => {
-    const y = 176 + i * 62;
-    return `<rect x="28" y="${y - 30}" width="532" height="48" rx="10" fill="${C.panelHi}"/>
-${text(48, y + 1, `0${i + 1}`, { size: 17, weight: 700, fill: C.blue })}
-${text(96, y + 2, p, { size: 23, cls: "sans", weight: 600 })}`;
-  });
-
-  const sec1 = chipRow(640, 80, [{ label: "PENTESTING" }, { label: "OSINT" }, { label: "RISK ANALYSIS" }], { size: 15, color: C.red, h: 34 }, 10);
-  const sec2 = chipRow(640, 124, [{ label: "NETWORK ANALYSIS" }, { label: "OT/ICS SECURITY" }], { size: 15, color: C.red, h: 34 }, 10);
-
-  const body = `
-${card(0, 0, 588, 380, C.blue)}
-${text(28, 52, "AUTOMATION SPECIALIST", { size: 16, fill: C.blue, spacing: 3, weight: 700 })}
-${text(28, 84, "Financial services · lending", { size: 26, cls: "sans", weight: 800 })}
-${text(28, 112, "Automating the back office:", { size: 17, fill: C.muted })}
-${procRows.join("\n")}
-
-${card(612, 0, 588, 178, C.red)}
-${text(640, 52, "AD CYBERSECURITY · HVA", { size: 16, fill: C.red, spacing: 3, weight: 700 })}
-${sec1.svg}
-${sec2.svg}
-
-${card(612, 202, 588, 178, C.yellow)}
-${text(640, 254, "WEB", { size: 16, fill: C.yellow, spacing: 3, weight: 700 })}
-${text(640, 300, "Studio Lumeza website", { size: 32, cls: "sans", weight: 800 })}
-${text(640, 336, "Astro · client work", { size: 17, fill: C.muted })}
-`;
-  return svgDoc({
-    w: W, h: H, body,
-    title: "Work beyond Cobblemon Rejects",
-    desc: "Automation Specialist in financial services (lending), automating the back office: bank statement checks, email handling and business credit proposals. AD Cybersecurity at HvA: pentesting, OSINT, risk analysis, network analysis and OT/ICS security. Web: the Studio Lumeza website, built with Astro as client work.",
+    title: "Featured project: Cobblemon Rejects",
+    desc: "Featured project: Cobblemon Rejects, a Minecraft network where my role is lead developer, covering architecture, mods and operations. Players connect through a single Velocity proxy that routes them to five pure Fabric 1.21.1 backends: hub, peaceful, hard, resource and adventure. Shared state lives in Redis, MariaDB and MongoDB. What I built: the architecture (proxy and five Fabric backends), 15 custom mods in Java 21, the sync layer over Redis, MariaDB and MongoDB, and the operations with Docker, backups and 2FA. The hard part: a version-guarded Redis handoff, so switching worlds never rolls a player back.",
   });
 }
 
@@ -432,7 +367,7 @@ ${rows.join("\n")}
   });
 }
 
-const files = { "header.svg": header(), "cmrejects.svg": pokedex(), "handoff.svg": handoff(), "elsewhere.svg": elsewhere(), "toolbox.svg": toolbox() };
+const files = { "header.svg": header(), "what-i-do.svg": whatIDo(), "cmrejects.svg": pokedex(), "toolbox.svg": toolbox() };
 for (const [name, svg] of Object.entries(files)) {
   writeFileSync(join(outDir, name), svg);
   console.log(`${name}  ${(svg.length / 1024).toFixed(1)} KB`);
